@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: ems
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: atif
+Implementation-Vendor-Id: com.ems
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/ems
+Created-By: Maven Integration for Eclipse
+
