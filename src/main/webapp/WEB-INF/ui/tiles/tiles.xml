@@ -3,14 +3,28 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
-	<definition name="mainLayout" template="/ui/jsp/layout/main.jsp">
-		<put-attribute name="header" value="/ui/jsp/layout/header.jsp" />
+	<definition name="mainLayout" template="/WEB-INF/ui/templates/mainlayout.jsp">
+		<put-attribute name="sidebar"
+			value="/WEB-INF/ui/pages/common/sidebar.jsp" />
+		<put-attribute name="topbar"
+			value="/WEB-INF/ui/pages/common/topbar.jsp" />
 		<put-attribute name="body" value="" />
-		<put-attribute name="footer" value="/ui/jsp/layout/footer.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/ui/pages/common/footer.jsp" />
 	</definition>
 
-	<definition name="dashboard" extends="mainLayout">
-		<put-attribute name="body" value="/ui/jsp/view/dashboard.jsp" />
+	<definition name="post" extends="mainLayout">
+		<put-attribute name="body" value="/WEB-INF/ui/pages/post/post.jsp" />
+	</definition>
+
+	<definition name="projectlist" extends="mainLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/ui/pages/project/projectlist.jsp" />
+	</definition>
+
+	<definition name="projectdetail" extends="mainLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/ui/pages/project/projectdetail.jsp" />
 	</definition>
 
 </tiles-definitions>

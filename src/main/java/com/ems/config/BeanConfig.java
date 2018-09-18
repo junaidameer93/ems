@@ -19,20 +19,20 @@ public class BeanConfig {
 		MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter(mapper);
 		return converter;
 	}
-	
+
 	@Bean
-	public UrlBasedViewResolver viewResolver() {
+	public TilesConfigurer tilesConfigurer() {
+		final TilesConfigurer configurer = new TilesConfigurer();
+		configurer.setDefinitions(new String[] { "/WEB-INF/ui/tiles/tiles.xml" });
+		configurer.setCheckRefresh(true);
+		return configurer;
+	}
+
+	@Bean
+	public UrlBasedViewResolver tilesViewResolver() {
 		UrlBasedViewResolver tilesViewResolver = new UrlBasedViewResolver();
 		tilesViewResolver.setViewClass(TilesView.class);
 		return tilesViewResolver;
 	}
 
-	@Bean
-	public TilesConfigurer tilesConfigurer() {
-		TilesConfigurer tiles = new TilesConfigurer();
-		tiles.setDefinitions(new String[] { "/WEB-INF/ui/tiles/tiles.xml" });
-		return tiles;
-
-	}
-	
 }
