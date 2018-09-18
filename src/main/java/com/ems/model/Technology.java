@@ -15,7 +15,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "technology", catalog = "ems")
+@Table(name = "Technology", catalog = "ems")
 public class Technology implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;

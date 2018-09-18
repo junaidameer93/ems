@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
 @Entity
-@Table(name = "employee", catalog = "ems", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+@Table(name = "Employee", catalog = "ems", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class Employee implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -196,7 +196,7 @@ public class Employee implements java.io.Serializable {
 		this.salaries = salaries;
 	}
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "employee")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "member")
 	public Set<TeamMember> getTeams() {
 		return this.teams;
 	}
@@ -205,7 +205,7 @@ public class Employee implements java.io.Serializable {
 		this.teams = teams;
 	}
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "employee")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "teamLead")
 	public Set<Team> getTeamsLead() {
 		return this.teamsLead;
 	}
@@ -214,7 +214,7 @@ public class Employee implements java.io.Serializable {
 		this.teamsLead = teamsLead;
 	}
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "employee")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "manager")
 	public Set<Project> getProjects() {
 		return this.projects;
 	}

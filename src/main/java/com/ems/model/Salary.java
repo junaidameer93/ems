@@ -15,7 +15,7 @@ import javax.persistence.TemporalType;
 
 
 @Entity
-@Table(name = "salary", catalog = "ems")
+@Table(name = "Salary", catalog = "ems")
 public class Salary implements java.io.Serializable {
 
 	

@@ -1,0 +1,28 @@
+Add new employee with out manager
+url - http://localhost:8080/employee
+
+{
+	
+	"firstName": "Atif",
+	"middleName": "",
+	"lastName": "Shahzad",
+	"email": "atif@gmail.com",
+	"password": "123456",
+	"mobileNo": "03335678119"
+	
+}
+
+Add new employee with manager
+{
+	
+	"firstName": "Junaid",
+	"middleName": "",
+	"lastName": "Ameer",
+	"email": "junaid@gmail.com",
+	"password": "123456",
+	"mobileNo": "03335638119",
+	"manager":{
+		"empId": 1
+	}
+	
+}

@@ -1,0 +1,18 @@
+Add new project
+url - http://localhost:8080/project
+
+Note: startDate and estimatedEndDate are in milliseconds  go to this website to convert date to milliseconds https://www.epochconverter.com/
+
+{
+	
+	"name": "Auto Employee Management System",
+	"startDate": "1537246930162",
+	"estimatedEndDate": "1546232789000",
+	"proposalCost": 100000,
+	"description": "Auto EMS will manage the employee by using analytics on data and behaviour of employee and send report to relative departments  on daily basis",
+	"status": "false",
+	"manager":{
+		"empId": 1
+	}
+	
+}

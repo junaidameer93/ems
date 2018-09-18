@@ -18,7 +18,7 @@ import javax.persistence.TemporalType;
 
 
 @Entity
-@Table(name = "sprint", catalog = "ems")
+@Table(name = "Sprint", catalog = "ems")
 public class Sprint implements java.io.Serializable {
 
 	

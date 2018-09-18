@@ -1,0 +1,18 @@
+
+add new team with project and and team lead
+url - http://localhost:8080/team
+Note: createdAt is in milliseconds go to this website to convert date to milliseconds https://www.epochconverter.com/
+
+{
+	
+	"teamName": "Ems Java Team",
+	"createdAt": "1537246930162",
+	"status": false,
+	"teamLead":{
+		"empId": 2
+	},
+	"project":{
+		"id": 1
+	}
+	
+}

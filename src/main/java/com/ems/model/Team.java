@@ -16,15 +16,13 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-
 @Entity
-@Table(name = "team", catalog = "ems")
+@Table(name = "Team", catalog = "ems")
 public class Team implements java.io.Serializable {
-
 
 	private static final long serialVersionUID = 1L;
 	private Integer id;
-	private Employee employee;
+	private Employee teamLead;
 	private Project project;
 	private String teamName;
 	private Date createdAt;
@@ -35,9 +33,6 @@ public class Team implements java.io.Serializable {
 	public Team() {
 	}
 
-	
-
-	
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 
@@ -52,12 +47,12 @@ public class Team implements java.io.Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "teamLeadId", nullable = false)
-	public Employee getEmployee() {
-		return this.employee;
+	public Employee getTeamLead() {
+		return this.teamLead;
 	}
 
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
+	public void setTeamLead(Employee teamLead) {
+		this.teamLead = teamLead;
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)

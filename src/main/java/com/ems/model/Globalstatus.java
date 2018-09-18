@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "globalstatus", catalog = "ems")
+@Table(name = "GlobalStatus", catalog = "ems")
 public class Globalstatus implements java.io.Serializable {
 
 	

@@ -15,7 +15,7 @@ import javax.persistence.TemporalType;
 
 
 @Entity
-@Table(name = "empleave", catalog = "ems")
+@Table(name = "EmpLeave", catalog = "ems")
 public class EmpLeave implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;

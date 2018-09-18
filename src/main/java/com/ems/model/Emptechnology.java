@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "emptechnology", catalog = "ems")
+@Table(name = "EmpTechnology", catalog = "ems")
 public class Emptechnology implements java.io.Serializable {
 
 	

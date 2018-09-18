@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "leave", catalog = "ems")
+@Table(name = "Leave", catalog = "ems")
 public class Leave implements java.io.Serializable {
 
 

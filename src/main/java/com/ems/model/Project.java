@@ -18,13 +18,13 @@ import javax.persistence.TemporalType;
 
 
 @Entity
-@Table(name = "project", catalog = "ems")
+@Table(name = "Project", catalog = "ems")
 public class Project implements java.io.Serializable {
 
 	
 	private static final long serialVersionUID = 1L;
 	private Integer id;
-	private Employee employee;
+	private Employee manager;
 	private String name;
 	private Date startDate;
 	private Date estimatedEndDate;
@@ -53,12 +53,12 @@ public class Project implements java.io.Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "managerId", nullable = false)
-	public Employee getEmployee() {
-		return this.employee;
+	public Employee getManager() {
+		return this.manager;
 	}
 
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
+	public void setManager(Employee manager) {
+		this.manager = manager;
 	}
 
 	@Column(name = "name", nullable = false, length = 200)

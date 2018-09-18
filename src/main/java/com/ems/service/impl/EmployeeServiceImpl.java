@@ -1,5 +1,6 @@
 package com.ems.service.impl;
 
+import java.util.Date;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 	private EmployeeRepository repository;
 
 	public Employee save(Employee employee) {
-		// TODO Auto-generated method stub
+
+		try {
+			employee.setJoinedDate(new Date());
+			Employee savedEmployee = repository.save(employee);
+			return savedEmployee;
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 		return null;
 	}
 
