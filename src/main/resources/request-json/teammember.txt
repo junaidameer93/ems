@@ -1,0 +1,12 @@
+add team member 
+url - http://localhost:8080/teammember	
+{
+	"fromDate": "2018-09-18",
+	"status": "true",
+	"member":{
+		"empId": 1
+	},
+	"team":{
+		"id": 2
+	}	
+}
