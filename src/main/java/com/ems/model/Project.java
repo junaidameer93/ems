@@ -16,6 +16,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @Entity
 @Table(name = "Project", catalog = "ems")
@@ -51,6 +53,7 @@ public class Project implements java.io.Serializable {
 		this.id = id;
 	}
 
+	@JsonIgnoreProperties({"subOrdinate", "projects", "empTechnologies", "empLeaves", "empPosts", "salaries", "teams", "teamsLead"})
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "managerId", nullable = false)
 	public Employee getManager() {
@@ -145,6 +148,7 @@ public class Project implements java.io.Serializable {
 		this.sprints = sprints;
 	}
 
+	@JsonIgnoreProperties({"teamLead", "teammembers", "project"})
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "project")
 	public Set<Team> getTeams() {
 		return this.teams;

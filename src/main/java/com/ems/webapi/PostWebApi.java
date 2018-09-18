@@ -16,7 +16,7 @@ import com.ems.model.Post;
 import com.ems.service.api.PostService;
 
 @RestController
-@RequestMapping("post")
+@RequestMapping("api/post")
 public class PostWebApi {
 	
 	@Autowired
@@ -28,7 +28,7 @@ public class PostWebApi {
 		if (savedPost == null) {
 			return new ResponseEntity<String>("Not Saved", HttpStatus.OK);
 		}
-		return new ResponseEntity<Post>(savedPost, HttpStatus.OK);
+		return new ResponseEntity<Post>(savedPost, HttpStatus.CREATED);
 	}
 	
 
