@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.ems.model.EmpPost;
 import com.ems.model.Employee;
 import com.ems.projections.EmployeeWithManager;
+import com.ems.repository.EmpPostRepository;
 import com.ems.repository.EmployeeRepository;
 import com.ems.service.api.EmployeeService;
 
@@ -18,12 +20,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Autowired
 	private EmployeeRepository repository;
-
+	private EmpPostRepository postrepository;
 	public Employee save(Employee employee) {
 
 		try {
 			employee.setJoinedDate(new Date());
 			Employee savedEmployee = repository.save(employee);
+			EmpPost temp =(EmpPost) employee.getEmpposts();
+			temp=postrepository.save(temp);
 			return savedEmployee;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

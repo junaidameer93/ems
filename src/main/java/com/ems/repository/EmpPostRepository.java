@@ -2,6 +2,8 @@ package com.ems.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface EmpPostRepository extends JpaRepository<T, ID> {
+import com.ems.model.EmpPost;
+
+public interface EmpPostRepository extends JpaRepository<EmpPost, Integer> {
 
 }

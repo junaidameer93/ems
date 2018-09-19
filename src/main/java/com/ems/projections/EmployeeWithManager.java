@@ -7,7 +7,7 @@ public interface EmployeeWithManager {
 	String getLastName();
 
 	EManager getManager();
-
+	
 	interface EManager {
 		String getFirstName();
 

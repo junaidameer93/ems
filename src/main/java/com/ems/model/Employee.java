@@ -160,7 +160,7 @@ public class Employee implements java.io.Serializable {
 		this.joinedDate = joinedDate;
 	}
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "employee")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "employee")
 	public Set<Emptechnology> getEmpTechnologies() {
 		return this.empTechnologies;
 	}
@@ -169,7 +169,7 @@ public class Employee implements java.io.Serializable {
 		this.empTechnologies = empTechnologies;
 	}
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "employee")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "employee")
 	public Set<EmpLeave> getEmpLeaves() {
 		return this.empLeaves;
 	}
@@ -178,7 +178,7 @@ public class Employee implements java.io.Serializable {
 		this.empLeaves = empLeaves;
 	}
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "employee")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "employee")
 	public Set<EmpPost> getEmpposts() {
 		return this.empPosts;
 	}
@@ -187,7 +187,7 @@ public class Employee implements java.io.Serializable {
 		this.empPosts = empPosts;
 	}
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "employee")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "employee")
 	public Set<Salary> getSalaries() {
 		return this.salaries;
 	}
@@ -196,7 +196,7 @@ public class Employee implements java.io.Serializable {
 		this.salaries = salaries;
 	}
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "member")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "member")
 	public Set<TeamMember> getTeams() {
 		return this.teams;
 	}
@@ -205,7 +205,7 @@ public class Employee implements java.io.Serializable {
 		this.teams = teams;
 	}
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "teamLead")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "teamLead")
 	public Set<Team> getTeamsLead() {
 		return this.teamsLead;
 	}
@@ -214,7 +214,7 @@ public class Employee implements java.io.Serializable {
 		this.teamsLead = teamsLead;
 	}
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "manager")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "manager")
 	public Set<Project> getProjects() {
 		return this.projects;
 	}
@@ -224,7 +224,7 @@ public class Employee implements java.io.Serializable {
 	}
 
 	@JsonIgnoreProperties({ "manager" })
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "manager")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "manager")
 	public Set<Employee> getSubOrdinate() {
 		return this.subOrdinate;
 	}
